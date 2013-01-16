@@ -55,7 +55,7 @@ double gamma_p( const double A, const double X )
         		return 0;
         	}
         	g = b1 / a1 ;
-        	if(abs((g-gold)/g).lt.eps) {
+        	if( abs( ( g - gold ) / g ) < eps ) {
         		gamma_p = ONE - exp(-1 * X + A * log( X ) - gln ) * g ; // and take its complement
         		return gamma_p ;
         	}
