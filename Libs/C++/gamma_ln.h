@@ -4,9 +4,9 @@
 #include <cmath>
 #include "constants.h"
 
-double gamma_ln(double X );
+double gamma_ln( const double X );
 
-double gamma_ln(double X )
+double gamma_ln( const double X )
 {
 	double Y, ser, serTemp, gamma;
 
