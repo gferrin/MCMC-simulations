@@ -11,8 +11,8 @@ double gamma_ln( const double X )
 	double Y, ser, serTemp, gamma;
 
 	if( X <= 0 ) {
-		std::cout << 'GAMMA_LN: Argument X = ' << X << std::endl
-				  << 'GAMMA_LN: illegal argument.' << std::endl;
+		std::cout << "GAMMA_LN: Argument X = " << X << std::endl
+				  << "GAMMA_LN: illegal argument." << std::endl;
 		return 0;
 	}
 	if( X > 1 ) { // Full accuracy of Lanczos formula.
