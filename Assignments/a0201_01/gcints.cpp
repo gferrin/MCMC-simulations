@@ -14,6 +14,7 @@ int main(int argc, char const *argv[])
 	for( int i = 0; i < n; i++ ){
 		NA[i] = i + 1;
 		x = ( i * ONE ) / sqrt( TWO );
+		cout << i << endl;
 		P[i] = error_f( x );
 		Q[i] = HALF * ( ONE - P[i] );
 	} 

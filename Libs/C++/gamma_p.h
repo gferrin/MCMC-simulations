@@ -17,13 +17,13 @@ double gamma_p( const double A, const double X )
 
 	if( X < 0 || A <= 0 ) { 
 		std::cout << "A: " << A << " X: " << X << std::endl << " GAMMA_P - INPUT NOT COVERED\n" << std::endl;
-		return 0;
+		return gamma_p;
 	} 
 
 	gln = gamma_ln( A );
 
 	if( X < (A + ONE ) ){ // series expansion:
-		if( X <= ZERO ) { return 0; }
+		if( X <= ZERO ) { std::cout << "line 26 returning 0 \n"; return gamma_p; }
 		sum = ONE / A ; 
 		add = sum ;
 
@@ -32,7 +32,7 @@ double gamma_p( const double A, const double X )
 			sum += add ;
 
 			if( abs( add ) < ( abs( sum ) * eps ) ){
-				gamma_p = sum * exp( -1 * X + A * log( X ) - gln ) ;
+				gamma_p = sum * exp( -1 * X + A * log( X ) - gln );
 				return gamma_p;
 			}
 		}
@@ -51,8 +51,8 @@ double gamma_p( const double A, const double X )
         	b1 = X * b0 + i * b1 / a1 ;
         	a1 = X * a0 + i ;
         	if( a1 == 0 ) {
-        		std::cout << "a1 zero in gamma_i\n" ;
-        		return 0;
+        		std::cout << "a1 zero in gamma_p\n" ;
+        		return gamma_p;
         	}
         	g = b1 / a1 ;
         	if( abs( ( g - gold ) / g ) < eps ) {
@@ -64,7 +64,7 @@ double gamma_p( const double A, const double X )
 
 	if( ! lfinal ){
 		gamma_p = ZERO;
-		if( X <= ZERO ) { return 0; }
+		if( X <= ZERO ) { std::cout << "line 67 returning 0 \n"; return gamma_p; }
 		sum = ONE / A ; 
 		add = sum ;
 
@@ -80,7 +80,7 @@ double gamma_p( const double A, const double X )
 	} else {
 		// If this point is reached then everything has failed
 		std::cout << "gamma_i: : a too large, iter_max too small\n" ;
-		return 0 ;
+		return gamma_p ;
 	}
 }
 

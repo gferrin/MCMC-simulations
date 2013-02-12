@@ -7,13 +7,13 @@
 
 using namespace std;
 
-bool rmaset(Common &block, int seed1 = 1, int seed2 = 0);
+bool rmaset(Common &block, int seed1 = 1, int seed2 = 0, std::string& filename = "ranmar.txt" );
 
 bool rmaset(Common &block, int seed1, int seed2)
 { 
 	bool file = false;
 
-	ifstream inStream("ranmar.txt");
+	ifstream inStream( filename );
 
 	if(inStream.fail()){ // if the file does not exist give it values
  
