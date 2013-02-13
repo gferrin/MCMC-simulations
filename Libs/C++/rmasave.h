@@ -3,14 +3,14 @@
 
 #include "common_raset1.h"
 #include <fstream>
+#include <string>
 
+void rmasave(Common &block, std::string filename = "ranmar.txt");
 
-void rmasave(Common &block); //, std::string filename = "ranmar.txt");
-
-void rmasave(Common &block) //, std::string filename = "ranmar.txt")
+void rmasave(Common &block, std::string filename = "ranmar.txt")
 {
 	// open output stream
-	std::ofstream outStream("ranmar.txt");
+	std::ofstream outStream( filename );
 
 	outStream.precision(17);
 
