@@ -7,10 +7,10 @@
 
 void rmasave(Common &block, std::string filename = "ranmar.txt");
 
-void rmasave(Common &block, std::string filename = "ranmar.txt")
+void rmasave(Common &block, std::string filename )
 {
 	// open output stream
-	std::ofstream outStream( filename );
+	std::ofstream outStream( filename.c_str() );
 
 	outStream.precision(17);
 

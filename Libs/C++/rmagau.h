@@ -7,7 +7,8 @@
 
 #define PI 3.14159265
 
-void rmagau(Common &block, double &sinRan, double &cosRan);
+void rmagau(Common &block, double &sinRan, double &cosRan); // I think this is the wrong type of common block 
+															// which may be why these files are not working
 
 void rmagau(Common &block, double &sinRan, double &cosRan)
 {
@@ -15,6 +16,8 @@ void rmagau(Common &block, double &sinRan, double &cosRan)
 	double random = ranmar(block);
 
 	R = sqrt(fabs(2.0 * log(1.0 - random)));
+
+	random = ranmar(block);
 
 	sinRan = R * sin(twoPI * random);
 	cosRan = R * cos(twoPI * random);
