@@ -11,9 +11,9 @@
 
 using namespace std;
 
-int hist_gnu(int IUG0, int numberHist, int numberData, double histagram[], double Data[], double xMin, double xMax, int timesCalled = 0 );
+void hist_gnu(int IUG0, int numberHist, int numberData, double histagram[], double Data[], double xMin, double xMax, int timesCalled = 0 );
 
-int hist_gnu(int IUG0, int numberHist, int numberData, double histagram[], double Data[], double xMin, double xMax, int timesCalled )
+void hist_gnu(int IUG0, int numberHist, int numberData, double histagram[], double Data[], double xMin, double xMax, int timesCalled )
 {
 	int number_omit = 0;
 	const int precision = 7;
@@ -23,7 +23,7 @@ int hist_gnu(int IUG0, int numberHist, int numberData, double histagram[], doubl
 
 	if( timesCalled > 99){
 		cout << "HIST_GNU: INCT=99 Exhausted!" << endl;
-		return 0;
+		return;
 	}
 	// this is an array which will always have digits in it and will represent the file number 
 	// based on the number of times HIST_GNU was called by a given rutine 
@@ -145,7 +145,7 @@ int hist_gnu(int IUG0, int numberHist, int numberData, double histagram[], doubl
 		cout << "HIST_GNU Warning: Data omitted\n" << endl; 
 	}
 
-	return 0;
+	return;
 }
 
 #endif /* HIST_GNU_H_ */
