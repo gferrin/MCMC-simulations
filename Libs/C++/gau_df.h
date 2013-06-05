@@ -10,7 +10,7 @@ double gau_df( double x );
 double gau_df( double x )
 {
 	double xx = x / sqrt(TWO);
-	return HALF + HALF * error_f(xx);
+	return (HALF + (HALF * error_f(xx)));
 }
 
 #endif /* GAU_DF_H_ */

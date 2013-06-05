@@ -23,7 +23,7 @@ double gamma_i( const double A, const double X )
 	gln = gamma_ln( A );
 
 	if( X < (A + ONE ) ){ // series expansion:
-		if( X <= ZERO ) { std::cout << "line 26 returning 0 \n"; return gamma_i; }
+		if( X == ZERO ) { std::cout << "line 26 returning 0 \n"; return gamma_i; }
 		sum = ONE / A ; 
 		add = sum ;
 

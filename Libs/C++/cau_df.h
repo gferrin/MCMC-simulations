@@ -4,9 +4,9 @@
 #include <math.h>
 #include "constants.h"
 
-double gau_df( double x );
+double cau_df( double x );
 
-double gau_df( double x )
+double cau_df( double x )
 {
 	return HALF + atan(x)/PI;
 }
