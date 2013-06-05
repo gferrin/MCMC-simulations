@@ -46,18 +46,40 @@ int main(void)
 		
 		double x = (i * ONE) / TEN;
 		double yu = ZERO;
-		if( x > -ONE ){
-			yu = HALF * (x + ONE); 
-		}
-		if( x > ONE ){
-			yu = ONE;
-		}
-		double yg = gau_df(x);
+
+		if( x > -ONE ){ yu = HALF * (x + ONE); }
+		if( x > ONE ){ yu = ONE; }
+
+		double yg = gau_df(x); // This is giving the wrong results
 		double yc = cau_df(x);
 
 		cum_dis << fixed << x << "\t" << scientific << yu << "\t" << yg << "\t" << yc << endl;
 	}
 	cum_dis.close();
 
+	/* peaked cumulative distribution functions: */
+	ofsteam peak_dis("fig3.d");
+	peak_dis.precision(precision);
+	peak_dis.setf(ios::left);
+
+	for(int i = -range; i <= range; ++i){
+		
+		double x = (i * ONE) / TEN;
+		double yu = ZERO;
+		
+		if( x > -ONE ){ yu = HALF * (x + ONE); }
+		if( x > ONE ){  yu = ONE; }
+
+		double yg = gau_df(x); // This is giving the wrong results
+		double yc = cau_df(x);
+
+		if(yu > HALF){ yu = ONE - yu; }
+		if(yg > HALF){ yg = ONE - yg; }
+		if(yc > HALF){ yc = ONE - yc; }
+
+		peak_dis << fixed << x << "\t" << scientific << yu << "\t" << yg << "\t" << yc << endl;
+	}
+	peak_dis.close();
+	
 	return 0;
 }

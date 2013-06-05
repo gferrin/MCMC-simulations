@@ -28,8 +28,8 @@ double gamma_i( const double A, const double X )
 		add = sum ;
 
 		for( int i = 1; i <= iter_max; i++ ){
-			add = add * X / ( A + i ) ;
-			sum += add ;
+			add = add * X / ( A + i );
+			sum += add;
 
 			if( abs( add ) < ( abs( sum ) * eps ) ){
 				gamma_i = sum * exp( -1 * X + A * log( X ) - gln );
@@ -62,7 +62,7 @@ double gamma_i( const double A, const double X )
       	}
 	}
 
-	if( ! lfinal ){
+	if( !lfinal ){
 		gamma_i = ZERO;
 		if( X <= ZERO ) { std::cout << "line 67 returning 0 \n"; return gamma_i; }
 		sum = ONE / A ; 
