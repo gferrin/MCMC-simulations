@@ -1,5 +1,3 @@
-/* WARNING: This function has not yet been properly tested */
-
 #ifndef GAMMA_I_H_
 #define GAMMA_I_H_
 
@@ -22,11 +20,11 @@ double gamma_i( const double A, const double X )
 
 	gln = gamma_ln( A );
 
-	if( X < (A + ONE ) ){ // series expansion:
+	if(X < (A + ONE )){ // series expansion:
 		if( X == ZERO ) { std::cout << "line 26 returning 0 \n"; return gamma_i; }
 		sum = ONE / A ; 
 		add = sum ;
-
+		
 		for( int i = 1; i <= iter_max; i++ ){
 			add = add * X / ( A + i );
 			sum += add;

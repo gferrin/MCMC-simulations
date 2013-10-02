@@ -20,9 +20,9 @@ double gamma_ln( const double X )
 	} else { //Use Gamma(z+1)=z*Gamma(z).
 		Y = X + 1;
 	}
-	serTemp = ((ONE+C1_L/Y)+C2_L/(Y+ONE))+C3_L/(Y+TWO);
-	ser = ((serTemp +C4_L/(Y+THREE))+C5_L/(Y+FOUR))+C6_L/(Y+FIVE);
-	gamma = (Y-HALF)*log(Y+FNINE_HALF)-(Y+FNINE_HALF)+log(STP_L*ser);
+	serTemp = ((ONE + C1_L / Y) + C2_L / (Y + ONE)) + C3_L / (Y + TWO);
+	ser = ((serTemp + C4_L / (Y + THREE)) + C5_L / (Y + FOUR)) + C6_L / (Y + FIVE);
+	gamma = (Y - HALF) * log(Y + FNINE_HALF) - (Y + FNINE_HALF) + log(STP_L * ser);
 	if(X > 1){ return gamma; }
 	gamma -= log(X);
 
