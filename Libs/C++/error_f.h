@@ -14,7 +14,8 @@ double error_f( double X )
 {
 	double sign = 1;
 
-	if(sin(X) < 0){
+	if( X < 0){
+		std::cout << "Hello I'm negative " << X << " and my sign is " << sin(X) << std::endl;
 		sign *= -1;
 	}
 

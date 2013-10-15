@@ -7,9 +7,7 @@
 
 #define PI 3.14159265
 
-void rmagau(Common &block, double &sinRan, double &cosRan); // I think this is the wrong type of common block 
-															// which may be why these files are not working
-
+void rmagau(Common &block, double &sinRan, double &cosRan); 
 void rmagau(Common &block, double &sinRan, double &cosRan)
 {
 	double twoPI = 2*PI, R;

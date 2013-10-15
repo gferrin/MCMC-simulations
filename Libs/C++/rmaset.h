@@ -49,8 +49,6 @@ bool rmaset(Common &block, int seed1, int seed2, std::string filename )
 		block.I = 96;
 		block.J = 32;
 
-		cout << "\n RANMAR INITIALIZED.\n" << endl;
-
 		file = false; // give file a value of false if it does not exist
 
 	} else { // otherwise extract the values from the file
