@@ -1,3 +1,3 @@
 
-Means and Error Bars: Compile and run eb0.f.
+Means and Error Bars: Compile and run eb0.h.
 

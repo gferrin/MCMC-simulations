@@ -5,7 +5,6 @@
 #include "../../Libs/C++/ranmar.h"
 #include "../../Libs/C++/rmagau.h"
 #include "../../Libs/C++/rmacau.h"
-#include "../../Libs/C++/stmean.h"
 #include "../../Libs/C++/steb0.h"
 #include "../../Libs/C++/common_raset1.h"
 

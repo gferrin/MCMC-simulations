@@ -7,7 +7,7 @@
 
 using namespace std;
 
-bool rmaset(Common &block, int seed1 = 1, int seed2 = 0, std::string filename = "ranmar.txt" );
+bool rmaset(Common &block, int seed1 = 1, int seed2 = 0, const std::string filename = std::string("ranmar.txt"));
 
 bool rmaset(Common &block, int seed1, int seed2, std::string filename )
 { 
