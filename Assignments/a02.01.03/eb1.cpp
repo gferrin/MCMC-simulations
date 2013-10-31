@@ -15,7 +15,7 @@ int main(void)
 	double data[kmax], weight[kmax];
 	double mean, error;
 
-	cout <<  "Program EB1 (eb1.f):" << endl;
+	cout <<  "Program EB1 (eb1.cpp):" << endl;
 
 	struct Common block;
 	rmaset(block, 1, 0, string("rmarin.d"));
