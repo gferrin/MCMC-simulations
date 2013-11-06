@@ -15,12 +15,10 @@ double error_f( double X )
 	double sign = 1;
 
 	if( X < 0){
-		std::cout << "Hello I'm negative " << X << " and my sign is " << sin(X) << std::endl;
 		sign *= -1;
 	}
 
 	double error = sign * gamma_i(0.5, ( X * X )); // Incomplete gamma function.
-	// std::cout << "sin(x): " <<  sin(X) << " gamma_i: " << gamma_i( HALF, ( X * X )) << std::endl;
 	return error;
 }
 
