@@ -55,7 +55,7 @@ double gamma_i( const double A, const double X )
         	g = b1 / a1 ;
         	if( abs( ( g - gold ) / g ) < eps ) {
         		gamma_i = ONE - exp(-1 * X + A * log( X ) - gln ) * g ; // and take its complement
-        		return gamma_i ;
+        		return gamma_i;
         	}
       	}
 	}
@@ -80,6 +80,8 @@ double gamma_i( const double A, const double X )
 		std::cout << "gamma_i: : a too large, iter_max too small\n" ;
 		return gamma_i ;
 	}
+
+	return 0;
 }
 
 #endif /* GAMMa_I_H_ */

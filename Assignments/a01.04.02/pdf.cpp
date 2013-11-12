@@ -23,6 +23,8 @@ int main(void)
 	// PROBABILITY DENSITIES:
 	ofstream data_file("fig1.d");
 
+	// data_file.precision(7);
+
 	for(int i = -30; i <= 30; i++){
 		x = (i * ONE)/TEN;
 		yu = ZERO;
@@ -32,11 +34,11 @@ int main(void)
 		yg = exp(-HALF * x * x) /sqrt(TPI);
 		yc = ONE/(PI + PI * x * x);
 		if(x == -ONE){
-			data_file << setw(10) << x << ZERO << yg << yc << endl;
+			data_file << fixed << x << setw(16) <<  ZERO << setw(16) << scientific << yg << setw(16) << yc << endl;
 		}
-		data_file << setw(10) << x << yu << yg << yc << endl;
+		data_file << fixed << x << setw(16) << yu << setw(16) << scientific << yg << setw(16) << yc << endl;
 		if(x == ONE){
-			data_file << setw(10) << x << ZERO << yg << yc << endl;
+			data_file << fixed << x << setw(16) << ZERO << setw(16) << scientific << yg << setw(16) << yc << endl;
 		}
 	} 
 
@@ -62,7 +64,7 @@ int main(void)
 		if(yg > HALF) yg = ONE - yg;
 		if(yc > HALF) yc = ONE - yc;
 
-		data_file2 << x << yu << yg << yc << endl;
+		data_file2 << fixed << x << setw(16) << yu << setw(16) << scientific << yg << setw(16) << yc << endl;
 	} 	
 
 	data_file2.close();
