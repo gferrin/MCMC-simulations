@@ -1,5 +1,5 @@
-#ifndef GAU_XF_H_
-#define GAU_XF_H_
+#ifndef GAU_XQ_H_
+#define GAU_XQ_H_
 
 #include "gau_df.h"
 #include "constants.h"
@@ -27,4 +27,4 @@ double gau_xq(double q)
 	return function_inverse1(gau_df, q, x1, x2);
 }
 
-#endif /* GAU_XF_H_ */
+#endif /* GAU_XQ_H_ */
